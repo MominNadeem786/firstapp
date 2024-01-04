@@ -388,34 +388,34 @@ void main() {
 //     {'name': 'SAAD', 'marks': [70, 65, 75], 'section': 'A', 'rollNumber': 103},
 //   ];
 
-//   for (var student in studentDetails) {
-//     String name = student['name'];
-//     List<int> marks = student['marks'];
-//     double average = calculateAverage(marks);
-//     String grade = calculateGrade(average);
+  for (var student in studentDetails) {
+    String name = student['name'];
+    List<int> marks = student['marks'];
+    double average = calculateAverage(marks);
+    String grade = calculateGrade(average);
 
-//     print('$name - Roll Number: ${student['rollNumber']} - Grade: $grade');
-//   }
-// }
+    print('$name - Roll Number: ${student['rollNumber']} - Grade: $grade');
+  }
+}
 
-// double calculateAverage(List<int> marks) {
-//   int sum = 0;
-//   for (var mark in marks) {
-//     sum += mark;
-//   }
-//   return sum / marks.length;
-// }
+double calculateAverage(List<int> marks) {
+  int sum = 0;
+  for (var mark in marks) {
+    sum += mark;
+  }
+  return sum / marks.length;
+}
 
-// String calculateGrade(double average) {
-//   if (average >= 90) {
-//     return 'A';
-//   } else if (average >= 80) {
-//     return 'B';
-//   } else if (average >= 70) {
-//     return 'C';
-//   } else if (average >= 60) {
-//     return 'D';
-//   } else {
-//     return 'F';
-//   }
+String calculateGrade(double average) {
+  if (average >= 90) {
+    return 'A';
+  } else if (average >= 80) {
+    return 'B';
+  } else if (average >= 70) {
+    return 'C';
+  } else if (average >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
 }
